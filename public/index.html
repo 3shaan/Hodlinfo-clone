@@ -29,11 +29,11 @@
                 <div class="circle">
                     <svg>
                         <circle cx="18" cy="18" r="18"/>
-                        
+                        <circle cx="18" cy="18" r="18" id="sec"/>
                     </svg>
-                    <p class="seconds">43</>
+                    <p class="seconds">0</>
                 </div>
-                <button class="telegram">Connect telegram</button>
+                <button class="telegram"><img src="./assets/telegram.png" alt=""> Connect telegram</button>
                 <label class="switch">
                     <input type="checkbox" checked>
                     <span class="slider round"></span>
@@ -45,23 +45,23 @@
         <h2>Best price to trade</h2>
         <div>
             <div>
-                <p>0.61 %</p>
-                <p>5 min</p>
+                <p>0.33 %</p>
+                <p>5 Mins</p>
             </div>
             <div>
-                <p>0.61 %</p>
-                <p>5 min</p>
+                <p>0.54 %</p>
+                <p>1 Hour</p>
             </div>
             <div>
                 <p>₹ 24,06,391</p>
             </div>
             <div>
-                <p>0.61 %</p>
-                <p>5 min</p>
+                <p>6.21 %</p>
+                <p>1 Days</p>
             </div>
             <div>
-                <p>0.61 %</p>
-                <p>5 min</p>
+                <p>9.97 %</p>
+                <p>7 Days</p>
             </div>
         </div>
         <p>Average BTC/INR net price including commission</p>
@@ -80,20 +80,10 @@
                 <th>Savings</th>
                </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    <td>1</td>
-                    
-                </tr>
+            <tbody id="trBody">
             </tbody>
         </table>
     </section>
-
 
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>

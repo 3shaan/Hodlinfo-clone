@@ -66,4 +66,44 @@ $('select').each(function () {
 
 });
 
+
+$.ajax({
+    url:"/traders",
+    method:"GET",
+    dataType:"json",
+    success:function(datas){
+        console.log(datas);
+        datas.forEach((data,i)=>{
+            const diff = ((data?.sell - data?.buy)/data?.buy)*100;
+            const savings = (diff /100)*data?.buy;
+
+        $("#trBody").append(`
+        <tr>
+            <td>${i+1}</td>
+            <td>${data?.name}</td>
+            <td>₹ ${data?.last}</td>
+            <td>₹ ${data?.buy}/${data?.sell}</td>
+            <td>${isNaN(diff) ? 0 : diff.toFixed(3)}%</td>
+            <td>₹${isNaN(savings) ? 0: savings.toFixed(2)}</td>
+        </tr>
+        `)
+        })
+    },
+    error:function (error){
+        console.error('Error fetching image file names:', error);
+    }
+})
+
+let i =0     ;
+ setInterval(()=>{
+    
+    $('#sec').css("strokeDashoffset",440 -(i*1.8))
+    $(".seconds").text(i)
+    i++
+    console.log(i)
+    if(i ===60){
+        i = 0
+    }
+ },1000)
+
 })
