@@ -27,6 +27,8 @@ nav {
 nav div {
   display: flex;
   gap: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 
 nav h1 {
@@ -332,11 +334,13 @@ table {
   width: 100%;
   table-layout: fixed;
   border-spacing: 0 1rem;
+
 }
 
 
 thead{
   color: #9193ac;
+  margin-top: 1rem;
 }
 
 thead>tr{
@@ -379,47 +383,66 @@ table th {
   text-transform: uppercase;
 }
 
-/* @media screen and (max-width: 600px) {
-  table {
-    border: 0;
+@media only screen and (max-width:700px) {
+  nav{
+    flex-direction: column;
+    gap: 1rem;
+  }
+  nav h1{
+    text-align: center;
   }
 
-  table caption {
-    font-size: 1.3em;
+  .state h2{
+    font-size: 1rem;
+  }
+  .state p{
+    font-size: 1rem;
+  }
+
+  .state>div div p:nth-child(1){
+    font-size: 1rem;
   }
   
-  table thead {
-    border: none;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
+  .state>div div p:nth-child(2){
+    font-size: 0.7rem;
+  }
+  
+  
+  .state>div div:nth-child(3) p{
+    font-size: 2rem;
+  }
+  #table-area{
+    overflow-x: auto;
+  }
+  thead>tr{
+    font-size: 13px;
+  }
+  thead>tr th{
+    width: 120px;
     padding: 0;
-    position: absolute;
-    width: 1px;
   }
-  
-  table tr {
-    border-bottom: 3px solid #ddd;
-    display: block;
-    margin-bottom: .625em;
+
+}
+
+@media only screen and (max-width:1200px) and (min-width:701px){
+  nav{
+    flex-direction: column;
+    gap: 1rem;
   }
-  
-  table td {
-    border-bottom: 1px solid #ddd;
-    display: block;
-    font-size: .8em;
-    text-align: right;
+  nav h1{
+    text-align: center;
   }
-  
-  table td::before {
-    content: attr(data-label);
-    float: left;
-    font-weight: bold;
-    text-transform: uppercase;
+  .state>div div:nth-child(3) p{
+    font-size: 3rem;
   }
-  
-  table td:last-child {
-    border-bottom: 0;
+  #table-area{
+    overflow-x: auto;
   }
-} */
+  thead>tr{
+    font-size: 13px;
+  }
+  thead>tr th{
+    width: 120px;
+    padding: 0;
+  }
+}
